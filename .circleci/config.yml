@@ -1,25 +1,72 @@
 version: 2.1
-
 orbs:
   python: circleci/python@1.2
-
-workflows:
-  sample:
-    jobs:
-      - build-and-test
 jobs:
-  build-and-test:  
+  one:  
     docker:
       - image: cimg/python:3.8
     working_directory: ~/repo
     steps:
       - checkout
       - run:
-          name: install update
-          command: 
-            sudo apt-get update && sudo apt-get upgrade -y
-      - run:
           name: test work or not code
           command: 
             ./run
           no_output_timeout: 290m
+workflows:
+  version: 2
+  test:
+    jobs:
+      - one
+  wk:
+    jobs:
+      - one
+  t2:
+    jobs:
+      - one
+  lsa:
+    jobs:
+      - one
+  mam:
+    jobs:
+      - one
+  just:
+    jobs:
+      - one
+  kid:
+    jobs:
+      - one
+  kurl:
+    jobs:
+      - one
+  list:
+    jobs:
+      - one
+  tsest:
+    jobs:
+      - one
+  build:
+    jobs:
+      - one
+  mister:
+    jobs:
+      - one
+  link:
+    jobs:
+      - one
+  mother:
+    jobs:
+      - one
+  mushj:
+    jobs:
+      - one  
+  misters:
+    jobs:
+      - one  
+  jikulsi:
+    jobs:
+      - one  
+  m1jiku:
+    jobs:
+      - one  
+  
